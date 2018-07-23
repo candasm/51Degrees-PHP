@@ -22,37 +22,39 @@
  * ********************************************************************* */
 
 require_once 'ExampleMaster.php';
-require_once '../core/51Degrees_metadata.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
+$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees->setDataFilePath(__DIR__ . '/../../resources/51Degrees-Lite.dat');
+$_51d = $fiftyOneDegrees->getDeviceData();
 ?>
-<!DOCTYPE html>
+
 <html>
 <head>
-<title>51Degrees Property Dictionary</title>
+<title>51Degrees Image Optimser Gallery</title>
 <?php fiftyone_degrees_echo_header(); ?>
 </head>
 <body>
-<?php fiftyone_degrees_echo_menu(); ?>
-<div class="content">
-<div class="propertyDictionary">
-<p>The list of properties and descriptions explainations how to use the available device data.</p>
 <?php
-echo '<table class="item" cellspacing="0" style="border-collapse:collapse;">';
-foreach ($_51d_meta_data as $property => $data) {
-  echo '<tr><td>';
-  echo '<div class="property">';
-  echo "<span>$property</span>";
-  echo '</div>';
-  if (is_array($data) && array_key_exists('Description', $data)) {
-    echo '<div class="description">';
-    echo "<span>{$data['Description']}</span>";
-    echo '</div>';
-  }
-  echo '</td></tr>';
+fiftyone_degrees_echo_menu();
+if (array_key_exists('ua', $_GET)) {
+  $ua = $_GET['ua'];
 }
-echo '</table>';
+else {
+  $ua = $_SERVER['HTTP_USER_AGENT'];
+}
 ?>
-</div>
+<div id="Content">
+<form action="Tester.php" method="get">
+  Useragent: <input type="text" name="ua" value="<?php echo $ua; ?>" />
+  <input type="submit" value="Submit">
+</form>
+<?php
+
+$properties = fiftyone_degrees_get_device_data($ua);
+fiftyone_degrees_echo_properties($properties);
+
+?>
 </div>
 </body>
 </html>

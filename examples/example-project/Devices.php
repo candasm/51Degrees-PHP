@@ -36,7 +36,10 @@ require_once 'ExampleMaster.php';
 <?php
 
 $_fiftyone_degrees_defer_execution = TRUE;
-  require_once '../core/51Degrees.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees->setDataFilePath(__DIR__ . '/../../resources/51Degrees-Lite.dat');
 fiftyone_degrees_set_file_handle();
 $headers = fiftyone_degrees_get_headers();
 $dataset_name = fiftyone_degrees_get_dataset_name($headers);

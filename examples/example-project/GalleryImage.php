@@ -12,7 +12,11 @@ require_once 'ExampleMaster.php';
 <div id="Content">
 <?php
 
-require_once '../core/51Degrees.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees->setDataFilePath(__DIR__ . '/../../resources/51Degrees-Lite.dat');
+$_51d = $fiftyOneDegrees->getDeviceData();
 
 $headers = fiftyone_degrees_get_headers();
 $dataset_name = fiftyone_degrees_get_dataset_name($headers);
