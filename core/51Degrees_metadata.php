@@ -27,12 +27,6 @@
  * and their values.
  */
 
-$_fiftyone_degrees_defer_execution = TRUE;
-require_once '51Degrees.php';
-
-$_51d_meta_data = fiftyone_degrees_get_meta_data();
-
-unset($_fiftyone_degrees_defer_execution);
 /**
  * Returns an array with properties in the data set and their values.
  *

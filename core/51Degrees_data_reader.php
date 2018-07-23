@@ -25,9 +25,6 @@
  * Provides detection functionality by interfacing with the file reader methods.
  */
 
-require_once '51Degrees_file_reader.php';
-require_once 'LinkedList.php';
-
 global $_fiftyone_degrees_data_file_path;
 if (isset($_fiftyone_degrees_data_file_path) == FALSE) {
   $_fiftyone_degrees_data_file_path = dirname(__FILE__) . '/51Degrees-Lite.dat';
