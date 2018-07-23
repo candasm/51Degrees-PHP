@@ -3,11 +3,11 @@
 
 [![Build Status](https://travis-ci.org/candasm/51Degrees-PHP.svg?branch=master)](https://travis-ci.org/candasm/51Degrees-PHP)
 
-##About
+## About
 
 51Degrees for PHP can be installed by composer. Can be used like in basic examples.
 
-##Important Information
+## Important Information
 
 Please note that the native PHP API is no longer actively developed. Instead please use the C-Extension or the Cloud Implementation.
 
@@ -40,7 +40,7 @@ if ($isMobile) {
 }
 ```
 
-###Match Metrics
+### Match Metrics
 [match-metrics.php](./examples/match-metrics.php)
 ```php
 $fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
@@ -53,7 +53,7 @@ echo "<p>Method: " . $_51d["Method"] . "</p>";
 echo "<p>Difference: " . $_51d["debug_info"]["difference"] . "</p>";
 ```
 
-###Metadata
+### Metadata
 To retrieve description for a particular property:
 [metadata.php](./examples/metadata.php)
 ```php
