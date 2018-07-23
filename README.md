@@ -21,6 +21,12 @@ This API is still maintained and is in the working order, but maintenance is onl
 
 Also please note that the native PHP API requires files of version 3.1.
 
+## Installing
+
+```
+composer require candasm/51degrees-php
+```
+
 ## Usage
 ### Basic Usage
 [basic-usage.php](./examples/basic-usage.php)
