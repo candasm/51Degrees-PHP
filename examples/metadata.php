@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees = new PionixLabs\FiftyOneDegrees\DeviceDetection();
 $fiftyOneDegrees->setDataFilePath(__DIR__ . '/../resources/51Degrees-Lite.dat');
 $_51d_meta_data = $fiftyOneDegrees->getMetadata();
 

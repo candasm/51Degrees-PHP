@@ -14,7 +14,7 @@ require_once 'ExampleMaster.php';
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees = new PionixLabs\FiftyOneDegrees\DeviceDetection();
 $fiftyOneDegrees->setDataFilePath(__DIR__ . '/../../resources/51Degrees-Lite.dat');
 $_51d = $fiftyOneDegrees->getDeviceData();
 

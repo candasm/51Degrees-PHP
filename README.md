@@ -24,14 +24,14 @@ Also please note that the native PHP API requires files of version 3.1.
 ## Installing
 
 ```
-composer require candasm/51degrees-php
+composer require pionix-labs/51degrees-php
 ```
 
 ## Usage
 ### Basic Usage
 [basic-usage.php](./examples/basic-usage.php)
 ```php
-$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees = new PionixLabs\FiftyOneDegrees\DeviceDetection();
 $fiftyOneDegrees->setDataFilePath(__DIR__ . '/../resources/tests/51Degrees-Lite.dat');
 $_51d = $fiftyOneDegrees->getDeviceData();
 
@@ -49,7 +49,7 @@ if ($isMobile) {
 ### Match Metrics
 [match-metrics.php](./examples/match-metrics.php)
 ```php
-$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees = new PionixLabs\FiftyOneDegrees\DeviceDetection();
 $fiftyOneDegrees->setDataFilePath(__DIR__ . '/../resources/tests/51Degrees-Lite.dat');
 $_51d = $fiftyOneDegrees->getDeviceData();
 
@@ -63,7 +63,7 @@ echo "<p>Difference: " . $_51d["debug_info"]["difference"] . "</p>";
 To retrieve description for a particular property:
 [metadata.php](./examples/metadata.php)
 ```php
-$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees = new PionixLabs\FiftyOneDegrees\DeviceDetection();
 $fiftyOneDegrees->setDataFilePath(__DIR__ . '/../resources/tests/51Degrees-Lite.dat');
 $_51d_meta_data = $fiftyOneDegrees->getMetadata();
 
@@ -75,7 +75,7 @@ echo $_51d_meta_data['IsMobile']['Description'];
 To print all possible values for a chosen property:
 [metadata-possible-values.php](./examples/metadata-possible-values.php)
 ```php
-$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees = new PionixLabs\FiftyOneDegrees\DeviceDetection();
 $fiftyOneDegrees->setDataFilePath(__DIR__ . '/../resources/tests/51Degrees-Lite.dat');
 $_51d_meta_data = $fiftyOneDegrees->getMetadata();
 
@@ -91,7 +91,7 @@ echo "</pre>";
 If not set they will all use default options.
 
 ```php
-$fiftyOneDegrees = new Candasm\FiftyOneDegrees\DeviceDetection();
+$fiftyOneDegrees = new PionixLabs\FiftyOneDegrees\DeviceDetection();
 $fiftyOneDegrees->setDataFilePath(__DIR__ . '/../resources/tests/51Degrees-Lite.dat');
 /**
  * Controls if property values are set to their typed values or strings.
