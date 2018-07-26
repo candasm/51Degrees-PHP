@@ -1,6 +1,6 @@
 <?php
 
-namespace Candasm\FiftyOneDegrees;
+namespace PionixLabs\FiftyOneDegrees;
 
 /**
  * Class DeviceDetection

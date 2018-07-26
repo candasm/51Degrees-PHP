@@ -1,11 +1,11 @@
 {
-  "name": "candasm/51degrees-php",
+  "name": "pionix-labs/51degrees-php",
   "description": "51Degrees composer package",
   "minimum-stability": "stable",
   "license": "mpl-2.0",
   "autoload": {
     "psr-4": {
-      "Candasm\\FiftyOneDegrees\\": "src/"
+      "PionixLabs\\FiftyOneDegrees\\": "src/"
     },
     "files": [
       "core/LinkedList.php",
